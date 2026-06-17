@@ -1,0 +1,31 @@
+# 真实备份数据严禁提交
+# 3x-ui x-ui.db 含客户 UUID、密码哈希、订阅 ID 等敏感信息
+runbooks/backups/*
+!runbooks/backups/.gitkeep
+!runbooks/backups/README.md
+
+# 各类密钥与凭据文件
+*.key
+*.pem
+*.pfx
+*.p12
+*.crt
+*-secrets.*
+*.env
+.env
+.env.*
+secrets/
+
+# 临时与系统文件
+*.swp
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# 编辑器
+.vscode/
+.idea/
+
+# 日志
+*.log
