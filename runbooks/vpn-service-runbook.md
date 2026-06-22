@@ -30,6 +30,20 @@
 
 ## 资源台账
 
+### 管理后台部署位置
+
+| 项 | 值 |
+|---|---|
+| 主机 | 海外 199.193.126.80 |
+| 服务 | systemd `vpn-admin.service` (Node.js + nginx :80) |
+| URL | http://199.193.126.80/ |
+| 凭据 | `admin` / 见 `/opt/vpn-admin-mvp/.env` 里的 `ADMIN_PASSWORD`（同步自阿里云原密码） |
+| 数据 | `/opt/vpn-admin-mvp/data/db.json`（无数据库） |
+| 共享主机的其它服务 | xray:8443（VPN 节点，给爬虫做出站）、python3:8080（爬虫）、redis:6379 |
+| 迁移日期 | 2026-06-22（从阿里云 123.57.133.209 迁来；阿里云保留 30 天可回滚至 2026-07-22） |
+| 迁移设计 | [`specs/2026-06-22-vpn-admin-migrate-design.md`](../specs/2026-06-22-vpn-admin-migrate-design.md) |
+| 迁移计划 | [`plans/2026-06-22-vpn-admin-migrate.md`](../plans/2026-06-22-vpn-admin-migrate.md) |
+
 ### 住宅 IP
 
 | 编号 | 供应商 | 地区 | Endpoint | Port | Username | Password | 月费 | 到期日 | 纯净度 | 分配给 |
